@@ -1,22 +1,27 @@
- classDiagram
-      Animal <|-- Duck
-      Animal <|-- Fish
-      Animal <|-- Zebra
-      Animal : +int age
-      Animal : +String gender
-      Animal: +isMammal()
-      Animal: +mate()
-      class Duck{
-          +String beakColor
-          +swim()
-          +quack()
-      }
-      class Fish{
-          -int sizeInFeet
-          -canEat()
-      }
-      class Zebra{
-          +bool is_wild
-          +run()
-      }
-     
+classDiagram
+ direction LR
+ class form1{
+ -cheakin():void
+ -cheaout():void
+ -Save():void
+ -Clear():void
+}
+ class Pay{
+ -discountcode():void
+ -pay():void
+ -back():void
+ }
+ class codepay{
+ -couponCode:string
+ -minimumPice:double
+ +creat(double min):void
+ +getCoupon():void
+ }
+ class Buy{
+ -totalPice:double
+ +Bill(pay double,getmoney Double):void
+ +payBill():double
+  }
+  Pay -- codepay
+  Pay -- Buy
+  
